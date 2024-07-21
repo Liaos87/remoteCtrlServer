@@ -1,0 +1,21 @@
+本项目为格姆特中控服务端，接受手机端发送的http请求，实现在windows和linux上远程控制视频播放等功能。下面为项目导入时所需的步骤和说明：
+一，初始化工作：
+（1）python语言包安装配置(可自行百度)：
+语言包下载地址：https://www.python.org/
+安装配置参考文档：https://blog.csdn.net/qq_43210428/article/details/134241446
+（2）开发工具PyCharm下载安装：
+下载地址：https://www.jetbrains.com.cn/pycharm/
+参考文档：https://blog.csdn.net/m0_59235508/article/details/134571626
+（3）VLC播放器：
+下载地址：https://www.videolan.org/
+（3）导入本项目：
+在本页面中点击"Code"->"Download ZIP"，将项目代码下载，然后用PyCharm的"Open"打开本项目即可。
+二，文件说明：
+.idea和.venv为python的配置文件夹。
+linux文件夹为后续实现linux操作系统远程中控的相关文件。
+windows文件夹为实现windows平台上接收远程命令进行相关控制的内容，其中：
+windows_http_server.py为服务端相关接收和控制命令类，运行此类则开启服务端接收和控制命令。
+windows_sys_controller.py为实现windows内部控制命令类，如增加和降低系统音量等，被windows_http_server.py调用。
+windows_vlc_controller.py为实现控制vlc播放器进行各项操作的控制类，如播放视频，暂停，停止等功能，被windows_http_server.py调用。
+三，注意点：
+windows系统不要开启360安全卫士等阻扰命令发送的程序，容易造成发送命令并屏蔽的可能。
