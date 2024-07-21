@@ -11,7 +11,7 @@ import logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-class win_vlc_controller:
+class vlc_controller:
     def __init__(self):
         self.vlc_instance = vlc.Instance('--no-xlib')
         self.vlc_player = self.vlc_instance.media_player_new()

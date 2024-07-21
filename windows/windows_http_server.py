@@ -3,8 +3,9 @@ import windows_vlc_controller
 from flask import Flask
 
 app = Flask(__name__)
-vlc_controller = windows_vlc_controller()
-sys_controller = windows_sys_controller()
+vlc_controller = windows_vlc_controller.vlc_controller()
+sys_controller = windows_sys_controller.sys_controller()
+
 
 # 解析get请求
 @app.route('/<command>', methods=['GET'])

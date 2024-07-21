@@ -7,7 +7,7 @@ import comtypes.client
 from comtypes import CLSCTX_ALL
 from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
 
-class win_sys_controller:
+class sys_controller:
 
     #关机命令
     def close_windows(self):
